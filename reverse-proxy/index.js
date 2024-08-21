@@ -15,6 +15,6 @@ app.use((req, res) => {
   const resolvesTo = `${BASE_PATH}${subdomain}`;
   return proxy.web(req, res, { target: resolvesTo, changeOrigin: true });
 });
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log("Server is running on port " + PORT);
 });
